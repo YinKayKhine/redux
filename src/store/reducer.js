@@ -1,3 +1,5 @@
+import * as actionTypes from "./actionTypes"
+
 const initialState = {
     articles: [
       { id: 1, title: "post 1", body: "Quisque cursus, metus vitae pharetra" },
