@@ -1,8 +1,10 @@
-import React, { useState } from "react"
+// import React, { useState } from "react"
 import { connect } from "react-redux"
 import Article from "../components/Article/Article"
 import AddArticle from "../components/AddArticle/AddArticle"
-import * as actionTypes from "../store/actionTypes"
+// import * as actionTypes from "../store/actionTypes"
+// import { addArticle } from "../store/actionCreators"
+import { simulateHttpRequest } from "../store/actionCreators"
 
 // const Articles = () => {
 //   const [articles, setArticles] = useState([
@@ -42,8 +44,10 @@ const Articles = ({ articles, saveArticle }) => (
   
   const mapDispatchToProps = dispatch => {
     return {
-      saveArticle: article =>
-        dispatch({ type: actionTypes.ADD_ARTICLE, articleData: { article } }),
+      // saveArticle: article =>
+      //   dispatch({ type: actionTypes.ADD_ARTICLE, articleData: { article } }),
+      // saveArticle: article => dispatch(addArticle(article)),
+      saveArticle: article => dispatch(simulateHttpRequest(article)),
     }
   }
   
